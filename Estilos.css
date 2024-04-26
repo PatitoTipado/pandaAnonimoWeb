@@ -1,0 +1,45 @@
+/*INDEX*/
+.cuerpo.wrapper .main .sector .formulario .conjunto .diseño.wrapper{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(6, calc(100% / 6));
+}
+
+.diseño.wrapper .a{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.diseño.wrapper .b{
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.diseño.wrapper .c{
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.diseño.wrapper .d{
+    grid-column: 1;
+    grid-row: 4;
+}
+
+.diseño.wrapper .e{
+    grid-column: 1;
+    grid-row: 5;
+}
+
+.diseño.wrapper .f{
+    grid-column: 1;
+    grid-row: 6;
+}
+
+.titulo-inicio, .main .sector .formulario .conjunto .diseño.wrapper .etiqueta.e{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*FIN*/
+

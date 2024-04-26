@@ -1,0 +1,33 @@
+/*BODY*/
+
+.cuerpo{
+    margin: 0;
+    background: linear-gradient(#03002c, #08073b, #020022);
+    background-repeat: no-repeat;
+    position: relative;
+    min-height: 100vh;
+    color: rgb(216, 218, 222);
+}
+
+/*GRID-BODY*/
+.cuerpo.wrapper{
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 10% 80% 10%;
+}
+
+.cuerpo.wrapper .encabezado{
+    grid-column: 1/4;
+    grid-row: 1;
+}
+
+.cuerpo.wrapper .main{
+    grid-column: 2/3;
+    grid-row: 2;
+}
+
+.cuerpo.wrapper .pie{
+    grid-column: 1/4;
+    grid-row: 3;
+}
+/*FIN GRID-BODY*/

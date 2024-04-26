@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../EstilosComunes/Estilos_Comunes_Uno.css">
+        <link rel="stylesheet" href="./Estilos.css">
+        <title>REGISTRO</title>
+
+    </head>
+
+    <body class="cuerpo wrapper">
+    
+        <header class="encabezado">
+
+            <div class="diseño">
+
+                <p class="unflix"><a href="../Index.html">UNFLIX</a></p><p class="enlace"><a href="../Index.html">Iniciar sesion</a></p>
+
+            </div>
+
+        </header>
+
+        <main class="main">
+
+            <section class="sector">
+
+                <form action="../Index.html" method="get" class="formulario">
+
+                    <fieldset class="conjunto">
+
+                        <div class="diseño wrapper">
+
+                            <h1 class="titulo-inicio a">Registrarse</h1>
+
+                            <label class="etiqueta b" for="nombre"><input class="espacio" type="text" name="nombre" id="nombre" placeholder="Nombre:" required></label>
+                            <label class="etiqueta c" for="apellido"><input class="espacio" type="text" name="apellido" id="apellido" placeholder="Apellido:" required></label>
+                            <label class="etiqueta d" for="email"><input class="espacio" type="email" name="email" id="email" placeholder="Email:" required></label>
+                            <label class="etiqueta e" for="usuario"><input class="espacio" type="text" name="usuario" id="usuario" placeholder="Usuario:" required></label>
+                            <label class="etiqueta f" for="password"><input class="espacio" type="password" id="password" name="password" placeholder="Contraseña:" required></label>
+                            <label class="etiqueta g" for="password"><input class="espacio" type="password" id="password" name="password" placeholder="Repetir contraseña:" required></label>
+
+                            <h2 class="titulo-inicio h">Metodo de pago</h2>
+
+                            <label class="etiqueta radio i" for="credito"><input type="radio" id="credito" name="credito-debito" required> Tarjeta de credito</label>
+                            <label class="etiqueta radio j" for="debito"><input type="radio" id="debito" name="credito-debito" required> Tarjeta de debito </label>
+
+                            <label class="etiqueta k" for="numero-tarjeta"><input class="espacio" type="number" name="numero-tarjeta" id="numero-tarjeta" placeholder="Numero de la tarjeta:" required></label>
+                            <label class="etiqueta l" for="titular"><input class="espacio" type="text" name="titular" id="titular" placeholder="Titular de la tarjeta:" required></label>
+                            <label class="etiqueta m" for="cvv"><input class="espacio" type="number" name="cvv" id="cvv" placeholder="CVV:" required></label>
+
+                            <p class="n">Fecha de caducidad:</p>
+
+                            <label class="etiqueta ñ" for="mes"><input class="espacio" type="month" name="mes" id="mes" required></label>
+
+                            <p class="o">Emisor de la tarjeta:</p>
+
+                            <label class="etiqueta radio p" for="visa"><input type="radio" id="visa" name="visa-mastercard-cabal" required> VISA</label>
+                            <label class="etiqueta radio q" for="mastercard"><input type="radio" id="mastercard" name="visa-mastercard-cabal" required> MASTERCARD</label>
+                            <label class="etiqueta radio r" for="cabal"><input type="radio" id="cabal" name="visa-mastercard-cabal" required> CABAL</label>
+
+                            <div class="diseño botones">
+
+                                <label class="etiqueta" for="confirmar"><input class="submit" type="submit" value="Confirmar" id="submit" name="submit"></label>
+                                <label class="etiqueta" for="cancelar"><a href="../Index.html"><input class="boton" type="button" value="Cancelar" id="cancelar" name="cancelar"></a></label>
+
+                            </div>
+
+                        </div>
+
+                    </fieldset>
+
+                </form>
+
+            </section>
+
+        </main>
+
+        <footer class="pie">
+
+
+
+        </footer>
+
+    </body>
+
+</html>

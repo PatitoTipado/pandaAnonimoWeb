@@ -1,0 +1,143 @@
+/*REGISTRO*/
+
+.cuerpo.wrapper{
+    grid-template-rows: 5% 90% 5%;
+}
+
+.cuerpo{
+    height: 80em;
+}
+
+.cuerpo.wrapper .main .sector .formulario .conjunto .diseño.wrapper{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(21, calc(100% / 21));
+}
+
+.diseño.wrapper .a{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.diseño.wrapper .b{
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.diseño.wrapper .c{
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.diseño.wrapper .d{
+    grid-column: 1;
+    grid-row: 4;
+}
+
+.diseño.wrapper .e{
+    grid-column: 1;
+    grid-row: 5;
+}
+
+.diseño.wrapper .f{
+    grid-column: 1;
+    grid-row: 6;
+}
+
+.diseño.wrapper .g{
+    grid-column: 1;
+    grid-row: 7;
+}
+
+.diseño.wrapper .h{
+    grid-column: 1;
+    grid-row: 8;
+}
+
+.diseño.wrapper .i{
+    grid-column: 1;
+    grid-row: 9;
+}
+
+.diseño.wrapper .j{
+    grid-column: 1;
+    grid-row: 10;
+}
+
+.diseño.wrapper .k{
+    grid-column: 1;
+    grid-row: 11;
+}
+
+.diseño.wrapper .l{
+    grid-column: 1;
+    grid-row: 12;
+}
+
+.diseño.wrapper .m{
+    grid-column: 1;
+    grid-row: 13;
+}
+
+.diseño.wrapper .n{
+    grid-column: 1;
+    grid-row: 14;
+}
+
+.diseño.wrapper .ñ{
+    grid-column: 1;
+    grid-row: 15;
+}
+
+.diseño.wrapper .o{
+    grid-column: 1;
+    grid-row: 16;
+}
+
+.diseño.wrapper .p{
+    grid-column: 1;
+    grid-row: 17;
+}
+
+.diseño.wrapper .q{
+    grid-column: 1;
+    grid-row: 18;
+}
+
+.diseño.wrapper .r{
+    grid-column: 1;
+    grid-row: 19;
+}
+
+.diseño.wrapper .diseño.botones{
+    grid-column: 1;
+    grid-row: 20/22;
+}
+
+.titulo-inicio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main .sector .formulario .conjunto .diseño.wrapper .etiqueta.radio{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.main .sector .formulario .conjunto .diseño.wrapper p{
+    margin: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: start;
+}
+
+.main .sector .formulario .conjunto .diseño.wrapper .diseño.botones{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/*FIN*/
