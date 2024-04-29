@@ -1,0 +1,19 @@
+/*PELICULAS Y SERIES*/
+/*BODY*/
+.cuerpo{
+    height: 50em;
+}
+/*FIN BODY*/
+/*GRID BODY*/
+.cuerpo.wrapper{
+    grid-template-rows: 10% 10% 20% 50% 10%;
+}
+
+.cuerpo.wrapper .main{
+    grid-template-rows: calc((100%/7)*2) calc((100%/7)*5);
+}
+
+.cuerpo.wrapper .main .sector-columnas .columna{
+    grid-template-rows: repeat(2, 50%);
+}
+/*FIN GRID BODY*/
