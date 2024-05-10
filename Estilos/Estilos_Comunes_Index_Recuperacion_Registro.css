@@ -38,15 +38,6 @@
     grid-template-rows: 100%;
 }
 
-@media screen and (max-width: 640px){
-    .cuerpo.wrapper .main{
-        grid-column: 1/4;
-        grid-row: 2;
-        overflow: hidden;
-    }
-    
-}
-
 .cuerpo.wrapper .pie{
     grid-column: 1/4;
     grid-row: 3;
@@ -111,7 +102,7 @@ p a{
     height: 2rem;
     border: 0.1rem solid #040421;
     border-radius: 1rem;
-    width: 8.8rem;
+    width: 11rem;
     box-sizing: border-box;
 }
 
@@ -126,3 +117,21 @@ p a{
 }
 /*FIN-MAIN*/
 /*FIN INDEX , RECUPERACION Y REGISTRO*/
+
+@media screen and (max-width: 640px){
+    .cuerpo.wrapper .main{
+        grid-column: 1/4;
+        grid-row: 2;
+        overflow: scroll;
+    }
+
+   .cuerpo .main .sector .formulario .conjunto .diseño.wrapper .etiqueta .submit, .cuerpo .main .sector .formulario .conjunto .diseño.wrapper .etiqueta .boton{
+    width: 8.8rem;
+   }
+}
+
+@media screen and (min-width: 1025px){
+    .cuerpo.wrapper{
+        grid-template-columns: 30% 40% 30%;
+    }
+}
