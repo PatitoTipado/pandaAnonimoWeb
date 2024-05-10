@@ -2,6 +2,7 @@
 /*BODY*/
 .cuerpo{
     margin: 0;
+    width: 100%;
     background: linear-gradient(#03002c, #08073b, #020022);
     background-repeat: no-repeat;
     position: relative;
@@ -24,6 +25,26 @@
 .cuerpo.wrapper .main{
     grid-column: 2/3;
     grid-row: 2;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+}
+
+.cuerpo.wrapper .main .sector, .cuerpo.wrapper .main .sector .formulario{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+}
+
+@media screen and (max-width: 640px){
+    .cuerpo.wrapper .main{
+        grid-column: 1/4;
+        grid-row: 2;
+        overflow: hidden;
+    }
+    
 }
 
 .cuerpo.wrapper .pie{
@@ -50,23 +71,23 @@ p a{
 /*FIN-ENLACE*/
 /*MAIN*/
 .cuerpo.wrapper .main .sector, .cuerpo.wrapper .main .sector .formulario{
-    width: 80%;
+    width: 100%;
     height: 100%;
-    margin: 0 10%;
 }
 
 .cuerpo.wrapper .main .sector .formulario .conjunto{
-    height: 95%;
+    height: 80%;
 }
 
 .main .sector .formulario .conjunto .diseño.wrapper .etiqueta .espacio{
-    height: 2.5em;
+    height: 2rem;
     width: 98%;
     background-color: #040421;
-    margin: 0.7em 0;
-    border: 0.1em solid #040421;
-    border-radius: 1em;
+    margin: 0.7rem 0;
+    border: 0.1rem solid #040421;
+    border-radius: 1rem;
     color: rgb(216, 218, 222);
+    box-sizing: border-box;
 }
 
 ::placeholder{
@@ -81,15 +102,17 @@ p a{
 
 .cuerpo.wrapper .main .sector .formulario .conjunto{
     background-color: rgba(216, 218, 222, 0.1);
-    border: 0.3em solid rgba(216, 218, 222, 0.3);
-    border-radius: 1em;
+    border: 0.3rem solid rgba(216, 218, 222, 0.3);
+    border-radius: 1rem;
+    box-sizing: border-box;
 }
 
 .main .sector .formulario .conjunto .diseño.wrapper .etiqueta .submit, .main .sector .formulario .conjunto .diseño.wrapper .etiqueta .boton{
-    height: 2.7em;
-    border: 0.1em solid #040421;
-    border-radius: 1em;
-    width: 11em;
+    height: 2rem;
+    border: 0.1rem solid #040421;
+    border-radius: 1rem;
+    width: 9rem;
+    box-sizing: border-box;
 }
 
 .main .sector .formulario .conjunto .diseño.wrapper .etiqueta .submit{
