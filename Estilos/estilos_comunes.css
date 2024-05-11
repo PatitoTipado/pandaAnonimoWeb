@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+html {
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #0c0d0d;
+    width: 100%;
+    height: 100%;
+}
+.menu{
+    background-color: #2f2c79;
+    display: flex;
+    list-style: none;
+}
+.navbar ul li:hover{
+    background-color: #063254;
+}
+.navhome{
+    background-color: #063254;
+}                
+.navbar ul li{
+    flex: auto;
+    text-decoration: none;
+    border: 0.0625em solid black;
+    padding: 1.25em;
+    text-align: center;
+}
+.navbar ul li a{
+    color: #ffff;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 1em;
+    font-size: 1.2em;
+}
+select{
+    padding: 0.1em;
+}
+input, select{
+    border: 0.12em solid #AD594D;
+    border-radius: 0.4em;
+}
+/* Responsive Nav 
+*/
+@media (max-width: 1290px) {
+    .navbar ul li{
+        padding: 0.7em;
+    }
+    .navbar ul li a{
+        font-size: 0.9em;
+        padding: 0.7em;
+    }
+}
+@media(max-width: 820px) {
+    .menu {
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+    }
+    .navbar ul li{
+        padding: 0.5em;
+    }
+    .navbar ul li a{
+        font-size: 0.8em;
+        padding: 0.5em;
+    }
+}
