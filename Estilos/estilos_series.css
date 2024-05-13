@@ -85,6 +85,9 @@ option{
     object-fit: cover;
     border-radius: 1.5em;
 }
+
+/*  respncive*/
+
 @media (max-width: 1290px) {
     .contenedorSerie{
         margin: 1em;
@@ -103,7 +106,7 @@ option{
         color: #FFFFFF;
     }
 }
-@media(max-width: 820px) {
+@media(max-width: 640px) {
     .contenedorDetalle{
         display: grid;
         grid-template-columns: 1fr;
@@ -149,7 +152,7 @@ option{
         font-size: 0.7em;
     }
 }
-@media(max-width: 820px) {
+@media(max-width: 640px) {
     .detalleSerie select,
     .detalleSerie label,
     .detalleSerie option{
@@ -167,7 +170,7 @@ option{
         margin: auto;
     }
 }
-@media(max-width: 820px) {
+@media(max-width: 640px) {
     .galery {
         display: grid;
         grid-template-columns: 1fr;
