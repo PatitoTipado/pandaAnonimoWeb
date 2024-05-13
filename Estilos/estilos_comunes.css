@@ -45,7 +45,11 @@ select{
 input, select{
    /* border: 0.12em solid #AD594D;*/
     border-radius: 0.4em;
+    font-family: serif;
+    
+    
 }
+
 /* Responsive Nav 
 */
 @media (max-width: 1290px) {
@@ -72,7 +76,7 @@ input, select{
         padding: 10px;
     }
     .contenedro ,.categ,.categoria, label{
-        font-size: 40px;
+        font-size:30px;
     }
 }
 
