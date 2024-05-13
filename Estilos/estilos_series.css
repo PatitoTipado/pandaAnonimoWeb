@@ -138,7 +138,6 @@ option{
         grid-template-columns: 1fr;
         grid-template-rows: auto; 
         align-items: flex-start;
-        background-color: black;
     }
     .btnComenzar{
         padding: 0.5em;
