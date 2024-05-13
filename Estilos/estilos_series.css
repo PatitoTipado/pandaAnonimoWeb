@@ -10,6 +10,7 @@
     max-width: 95%;
     grid-template-columns: 29em auto;
     grid-template-rows: 20em;
+    grid-template-rows: auto;
     gap: 0.5em;
 }
 .contenedorIframe{
