@@ -20,16 +20,18 @@
     </nav>
       
     <main>
-        <form class="datos"  action="../vistas/vistaPerfilUsuario.html" method="post">
+        <form class="datos"  action="./vistaPerfilUsuario.html" method="get">
             <div class=" imagen">
                <img src="https://cdn.icon-icons.com/icons2/1508/PNG/512/systemusers_104569.png" alt="foto-usuario"/>
             </div>
+
             <div class="box personales">
                <label class=" etiqueta a" for="email"><p class="texto">Nombre </p> <span id="email">unflixweb@unlam.edu.ar</span></label>
                <label class="etiqueta b" for="contraseña" ><p class="texto">Contraseña</p><span id="contraseña">********</span></label>
                <label class="etiqueta c" for="nueva-contraseña" ><p class="texto">Nueva Contraseña</p> <input type="password"name="contaseña" placeholder="ingrese nueva contraseña"></label>
                <label class="etiqueta d" for="repita-contraseña" ><p class="texto">Repita Contraseña</p> <input type="password" name="repita-contraseña" placeholder="repita contraseña" required></label>
             </div> 
+
             <div class=" box metodos ">
                <label class="eti a" for="metodos-pago">Metodos de pago </label>
                <label class="eti b" for="metodos-pago"><input type="radio" id="credito" name="metodos-pago" required> Tarjeta de credito</label>
@@ -38,6 +40,7 @@
                  <label class="eti e" for="titular"><input class="espacio" type="text" name="titular" id="titular" placeholder="Titular de la tarjeta:" required></label>
                  <label class="eti f" for="cvv"><input class="espacio" type="number" name="cvv" id="cvv" placeholder="CVV:" required></label>
             </div>
+
             <div class=" box botones">
                 <label class="boton" for="confirmas"><input class="boton sumit" type="submit" value="Guardar datos" id="submit" name="submit" ></label>
                 <label class="boton" for="cancelar"><input class="boton can"type="button" value="Cancelar" id="boton" name="cancelar"></label>
