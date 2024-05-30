@@ -8,14 +8,14 @@
     margin: 1em;
     display: grid;
     max-width: 95%;
-   grid-template-columns: 29em auto;
+   grid-template-columns: 32em auto;
   /* grid-template-rows: auto;*/
     gap: 0.5em;
 }
 .contenedorIframe{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 70% 15% auto;
+    grid-template-rows: 90% 10%;
     gap: 0.6em;
 }
 .contenedorIframe iframe{
@@ -23,15 +23,27 @@
     height: 100%; 
 }
 .btnComenzar{
+    position: relative;
     padding: 1em;
     width: 100%;
     background-color: #063254;
     border-radius: 0.5em;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 .btnComenzar a{
+    position: absolute;
     text-decoration: none;
     color: #ffff;
+    font-size: 2em;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 .actores a{
     text-decoration: none;
@@ -46,12 +58,21 @@
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 3.1em) auto;
     box-sizing: border-box;
+    height: 100%;
 }
 .descripcion{
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
 }
+
+.descripcion{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+}
+
 .detalleSerie{
     display: flex;
     justify-content: space-between;
@@ -82,7 +103,7 @@ option{
 .item img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
     border-radius: 1.5em;
 }
 
@@ -121,7 +142,7 @@ option{
         gap: 0.5em;
     }
     input, label, h2, p{
-        font-size: 0.6em;
+        font-size: 1rem;
         padding: 0.3em;
     }
     h3{
