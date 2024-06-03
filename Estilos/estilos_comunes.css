@@ -39,6 +39,9 @@ body{
     padding: 1em;
    /* font-size: 1.2em;*/
 }
+.white{
+    color:#FFFFFF;
+}
 select{
     padding: 0.1em;
 }

@@ -8,14 +8,14 @@
     margin: 1em;
     display: grid;
     max-width: 95%;
-   grid-template-columns: 32em auto;
+   grid-template-columns: 60% auto;
   /* grid-template-rows: auto;*/
     gap: 0.5em;
 }
 .contenedorIframe{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 90% 10%;
+    grid-template-rows: 86% auto;
     gap: 0.6em;
 }
 .contenedorIframe iframe{
@@ -23,27 +23,16 @@
     height: 100%; 
 }
 .btnComenzar{
-    position: relative;
     padding: 1em;
     width: 100%;
     background-color: #063254;
     border-radius: 0.5em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+    text-align: center;
 }
 .btnComenzar a{
-    position: absolute;
     text-decoration: none;
     color: #ffff;
-    font-size: 2em;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+    font-size: 1.4em;
 }
 .actores a{
     text-decoration: none;
@@ -58,21 +47,12 @@
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 3.1em) auto;
     box-sizing: border-box;
-    height: 100%;
 }
 .descripcion{
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
 }
-
-.descripcion{
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    font-size: 1.5rem;
-}
-
 .detalleSerie{
     display: flex;
     justify-content: space-between;
@@ -81,7 +61,7 @@ input, label, h2, p{
     color: #FFFFFF;
     font-weight: bold;
     padding: 0.6em;
-    font-size: 1.4rem;
+    font-size: 1.2em;
 }
 h3{
     font-size: 1.2em;
@@ -103,7 +83,7 @@ option{
 .item img{
     width: 100%;
     height: 100%;
-    object-fit: fill;
+    object-fit: cover;
     border-radius: 1.5em;
 }
 
@@ -117,13 +97,13 @@ option{
         grid-template-columns: 20 auto;
         grid-template-rows: auto;  
         gap: 0.5em;
-    }
+    }    
     input, label, h2, p{
-        font-size: 0.7em;
+        font-size: 1em;
         padding: 0.3em;
     }
     h3{
-        font-size: 0.82em;
+        font-size: 1em;
         color: #FFFFFF;
     }
 }
@@ -138,29 +118,17 @@ option{
         display: grid;
         max-width: 100%;
         grid-template-columns: 1fr;
-        grid-template-rows: auto; 
+        grid-template-rows: 30em auto auto; 
         gap: 0.5em;
     }
     input, label, h2, p{
-        font-size: 1.2rem;
+        font-size: 1em;
         padding: 0.3em;
     }
     h3{
-        font-size: 0.72em;
+        font-size: 1em;
         color: #FFFFFF;
     }
-}
-
-#tempora{
-    font-size: 1.4rem;
-}
-
-#capitulo{
-    font-size: 1.4rem;
-}
-
-.desplegable{
-    font-size: 1.4rem;
 }
 
 /* Responsive detalleSerie/Pelicula 
@@ -176,30 +144,21 @@ option{
         padding: 0.5em;
     }
     .btnComenzar a{
-        font-size: 0.7em;     
+        font-size: 1em;     
     }
     .detalleSerie select,
     .detalleSerie label,
     .detalleSerie option{
-        font-size: 0.7em;
+        font-size: 1em;
     }
 }
 @media(max-width: 640px) {
     .detalleSerie select,
     .detalleSerie label,
     .detalleSerie option{
-        font-size: 1rem;
+        font-size: 1em;
         width: 100%;
     }
-    
-    #tempora{
-        font-size: 0.8rem;
-    }
-    
-    #capitulo{
-        font-size: 0.8rem;
-    }
-
 }
 /* Responsive Galery 
 */
