@@ -8,14 +8,14 @@
     margin: 1em;
     display: grid;
     max-width: 95%;
-   grid-template-columns: 29em auto;
+   grid-template-columns: 60% auto;
   /* grid-template-rows: auto;*/
     gap: 0.5em;
 }
 .contenedorIframe{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 70% 15% auto;
+    grid-template-rows: 86% auto;
     gap: 0.6em;
 }
 .contenedorIframe iframe{
@@ -28,10 +28,23 @@
     background-color: #063254;
     border-radius: 0.5em;
     text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 .btnComenzar a{
     text-decoration: none;
     color: #ffff;
+    font-size: 1.4em;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 .actores a{
     text-decoration: none;
@@ -60,7 +73,7 @@ input, label, h2, p{
     color: #FFFFFF;
     font-weight: bold;
     padding: 0.6em;
-    font-size: 0.9em;
+    font-size: 1.2em;
 }
 h3{
     font-size: 1.2em;
@@ -95,6 +108,7 @@ option{
         max-width: 100%;
         grid-template-columns: 2fr 1fr; 
         gap: 0.5em;
+<<<<<<< HEAD
         text-align: center;
     }
     .contenedorIframe{
@@ -112,17 +126,51 @@ option{
         font-size: 20px;
     }
 
+=======
+    }    
+>>>>>>> 9c624cc916ad9b0dc36d1720cc30917ea0ae1c36
     input, label, h2, p{
-        font-size: 0.7em;
+        font-size: 1em;
         padding: 0.3em;
     }
     h3{
+<<<<<<< HEAD
         font-size: 20px;
+=======
+        font-size: 1em;
+>>>>>>> 9c624cc916ad9b0dc36d1720cc30917ea0ae1c36
         color: #FFFFFF;
         text-align:left;
         margin-left: 15px;
     }
 }
+<<<<<<< HEAD
+=======
+@media(max-width: 640px) {
+    .contenedorDetalle{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    .contenedorSerie{
+        margin: 1em;
+        display: grid;
+        max-width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 30em auto auto; 
+        gap: 0.5em;
+    }
+    input, label, h2, p{
+        font-size: 1em;
+        padding: 0.3em;
+    }
+    h3{
+        font-size: 1em;
+        color: #FFFFFF;
+    }
+}
+
+>>>>>>> 9c624cc916ad9b0dc36d1720cc30917ea0ae1c36
 /* Responsive detalleSerie/Pelicula 
 */
 @media (max-width: 1290px) {
@@ -143,16 +191,27 @@ option{
         padding: 0.5em;
     }
     .btnComenzar a{
-        font-size: 0.7em;     
+        font-size: 1em;     
     }
     .detalleSerie select,
     .detalleSerie label,
     .detalleSerie option{
-        font-size: 0.7em;
+        font-size: 1em;
     }
     
 }
+<<<<<<< HEAD
 
+=======
+@media(max-width: 640px) {
+    .detalleSerie select,
+    .detalleSerie label,
+    .detalleSerie option{
+        font-size: 1em;
+        width: 100%;
+    }
+}
+>>>>>>> 9c624cc916ad9b0dc36d1720cc30917ea0ae1c36
 /* Responsive Galery 
 */
 @media (max-width: 1290px) {

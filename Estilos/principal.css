@@ -72,6 +72,7 @@ label{
 @media(max-width: 640px) {
     .contenedorCategoria{
         display: flex;
+<<<<<<< HEAD
         flex-direction: column;
       /* grid-template-columns: 1fr;*/
         gap: 20px;
@@ -81,6 +82,11 @@ label{
         align-items: center;
         box-sizing: border-box;
         margin-left: 40px;
+=======
+        margin: auto;
+        padding: 0%;
+        flex-wrap: wrap;
+>>>>>>> 9c624cc916ad9b0dc36d1720cc30917ea0ae1c36
     }
     .contenedorCategoria .categ{
         display: flex;
@@ -93,11 +99,29 @@ label{
     .contenedorCategoria select,
    .contenedorCategoria label,
     .contenedorCategoria option{
+<<<<<<< HEAD
         width: 90%;
         font-size: 0.6em;
         font-family: serif;
       
     
+=======
+
+        font-size: 0.6rem;
+        height: 32px;
+    }
+
+    #icons{
+        font-size: 18px;
+        display: inline;
+    }
+
+    #busca{
+        width: 70%;
+    }
+    #categoria{
+        width: max-content;
+>>>>>>> 9c624cc916ad9b0dc36d1720cc30917ea0ae1c36
     }
 
  
