@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Estilos/Estilos_vista_perfil.css">
-    <link rel="stylesheet" href="../Estilos/estilos_comunes.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <title>vista perfil</title>
 </head>
 
@@ -13,48 +11,33 @@
     <header>
         <title> Vista Perfil</title>  
     </header>
-    <nav class="navbar">
+    <nav class="menu ">
         
-        <ul class="menu">
-            <li><i class="fa fa-home white" aria-hidden="true"></i>
-                <a href="../Vistas/principal.html">Home</a>
-            </li>
-            <li ><i class="fa fa-film white" aria-hidden="true"></i>
-                <a href="../Vistas/series.html">Series</a>
-            </li>
-            <li class="navbarpeliculas"><i class="fa fa-film white" aria-hidden="true"></i>
-                <a href="../Vistas/peliculas.html">Peliculas</a>
-            </li>
-            <li><i class="fa fa-user-circle white" aria-hidden="true"></i>
-                <a href="../Vistas/vistaPerfilUsuario.html">Perfil</a>
-            </li>
-        </ul>
+            <a href="../Vistas/principal.html">Home</a>
+            <a href="../Vistas/series.html">Series</a>
+            <a href="../Vistas/peliculas.html">Peliculas</a>
+            <a href="#">perfil</a>
     </nav>
       
     <main>
-        <form class="datos"  action="./vistaPerfilUsuario.html" method="get">
+        <form class="datos"  action="./vista_perfil.html" method="post">
             <div class=" imagen">
                <img src="https://cdn.icon-icons.com/icons2/1508/PNG/512/systemusers_104569.png" alt="foto-usuario"/>
             </div>
-
             <div class="box personales">
-               <label class=" etiqueta a" for="email"><p class="texto">Nombre </p> <span id="email">unflixweb@unlam.edu.ar</span></label>
-               <label class="etiqueta b" for="contraseña" ><p class="texto">Contraseña</p><span id="contraseña">********</span></label>
+               <label class=" etiqueta a" for="email"><p class="texto">Nombre </p> <input type="email" name="email" value="pandaa@gmail.com"></label>
+               <label class="etiqueta b" for="contraseña" ><p class="texto">Contraseña</p><input type="password" name="contraseña" value="1234567889"></label>
                <label class="etiqueta c" for="nueva-contraseña" ><p class="texto">Nueva Contraseña</p> <input type="password"name="contaseña" placeholder="ingrese nueva contraseña"></label>
                <label class="etiqueta d" for="repita-contraseña" ><p class="texto">Repita Contraseña</p> <input type="password" name="repita-contraseña" placeholder="repita contraseña" required></label>
             </div> 
-
             <div class=" box metodos ">
-                <div class="eti a">
-               <label class="a" for="metodos-pago">Metodos de pago </label>
-               <label class="a" for="metodos-pago"><input type="radio" id="credito" name="metodos-pago" required> Tarjeta de credito</label>
-               <label class="a" for="metodos-pago"><input type="radio" id="credito" name="metodos-pago" required> Tarjeta de debito</label>
-                </div>
+               <label class="eti a" for="metodos-pago">Metodos de pago </label>
+               <label class="eti b" for="metodos-pago"><input type="radio" id="credito" name="metodos-pago" required> Tarjeta de credito</label>
+               <label class="eti c " for="metodos-pago"><input type="radio" id="credito" name="metodos-pago" required> Tarjeta de debito</label>
                  <label class="eti d" for="numero-tarjeta"><input class="espacio" type="number" name="numero-tarjeta" id="numero-tarjeta" placeholder="Numero de la tarjeta:" required></label>
                  <label class="eti e" for="titular"><input class="espacio" type="text" name="titular" id="titular" placeholder="Titular de la tarjeta:" required></label>
                  <label class="eti f" for="cvv"><input class="espacio" type="number" name="cvv" id="cvv" placeholder="CVV:" required></label>
             </div>
-
             <div class=" box botones">
                 <label class="boton" for="confirmas"><input class="boton sumit" type="submit" value="Guardar datos" id="submit" name="submit" ></label>
                 <label class="boton" for="cancelar"><input class="boton can"type="button" value="Cancelar" id="boton" name="cancelar"></label>
