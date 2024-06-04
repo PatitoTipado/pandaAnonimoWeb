@@ -4,20 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Estilos/Estilos_vista_perfil.css">
-    <title>vista perfil</title>
+    <link rel="stylesheet" href="../Estilos/estilos_comunes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Vista perfil</title>
 </head>
 
-<body class="cuerpo ">
-    <header>
-        <title> Vista Perfil</title>  
-    </header>
-    <nav class="menu ">
+<body>
         
-            <a href="../Vistas/principal.html">Home</a>
-            <a href="../Vistas/series.html">Series</a>
-            <a href="../Vistas/peliculas.html">Peliculas</a>
-            <a href="#">perfil</a>
-    </nav>
+        <nav class="navbar">
+            <ul class="menu">
+                <li><i class="fa fa-home white" aria-hidden="true"></i>
+                    <a href="../Vistas/principal.html">Home</a>
+                </li>
+                <li><i class="fa fa-film white" aria-hidden="true"></i>
+                    <a href="../Vistas/series.html">Series</a>
+                </li>
+                <li><i class="fa fa-film white" aria-hidden="true"></i>
+                    <a href="../Vistas/peliculas.html">Peliculas</a>
+                </li>
+                <li class="navhome"><i class="fa fa-user-circle white" aria-hidden="true"></i>
+                    <a href="./vistaPerfilUsuario.html">Perfil</a>
+                </li>
+            </ul>
+        </nav>
       
     <main>
         <form class="datos"  action="./vistaPerfilUsuario.html" method="get">
