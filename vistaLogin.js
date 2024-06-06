@@ -9,6 +9,7 @@ formulario.addEventListener("submit", (e)=>{
    const inputs = document.querySelectorAll('.espacio');
    
    if(validadorString(email) && validadorString(contrasenia)){
+    localStorage.setItem(email);
     formulario.submit();
    }else{
     enfocarInputs(inputs);
