@@ -1,4 +1,4 @@
-import { validadorString, enfocarInputs } from "./formularioAux.js";
+import { validadorString, enfocarInputs } from "./js/formularioAux.js";
 
 //primero a que elemento queremos agarrar para aniadirle la funcion que queremos
 const formulario= document.querySelector(".formulario");
@@ -15,5 +15,3 @@ formulario.addEventListener("submit", (e)=>{
     e.preventDefault();
     }
 });
-
-
