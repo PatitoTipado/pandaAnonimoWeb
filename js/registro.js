@@ -8,8 +8,14 @@ const formulario = document.querySelector(".formulario");
 
 formulario.addEventListener("submit", (e)=>{
 
-    if(validaRegistro() && validaMetodoDePago()){ 
-
+    if(validaRegistro() && validaMetodoDePago()){
+        //traemos todos los datos que se usaran para validaciones
+        let user= {usuario:document.getElementById("usuario").value,
+            correo: document.getElementById("email").value,
+            contrasenia:document.getElementById("password").value
+        };
+        //los guardamos
+        localStorage.setItem(document.getElementById("email").value,JSON.stringify(user));
         formulario.submit();
     }else{
         e.preventDefault();

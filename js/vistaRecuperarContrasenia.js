@@ -1,4 +1,4 @@
-import { validadorString, enfocarInputs } from "./formularioAux.js";
+import { validadorString, enfocarInputs,esUnUsuarioValido } from "./formularioAux.js";
 
 //primero a que elemento queremos agarrar para aniadirle la funcion que queremos
 const formulario= document.querySelector(".formulario");
@@ -8,11 +8,11 @@ formulario.addEventListener("submit", (e)=>{
     let usuario= document.querySelector("#usuario").value;
     const inputs = document.querySelectorAll('.espacio');
     
-    if(validadorString(email) && validadorString(usuario)){
+    if(esUnUsuarioValido(email,usuario)){
      formulario.submit();
     }else{
-     enfocarInputs(inputs);
-     e.preventDefault();
+        alert("ingreso invalido, revise email y usuario")
+        e.preventDefault();
      }
      
  });

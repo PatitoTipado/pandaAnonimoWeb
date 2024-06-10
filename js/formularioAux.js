@@ -11,7 +11,7 @@ export function enfocarInputs(inputs) {
 }
 export function validadorString(valorString) {
 
-    return !valorString == "";
+    return !(valorString == "");
 }
 //a esto lo llamo astuta la rata (?) 
 export function enfocarInputsAnterior(inputs) {
@@ -74,4 +74,30 @@ export function validarContrasenia(contrasenia) {
     const validarRestrinciones = /^(?=.*[A-Za-z].*[A-Za-z])(?=.*\d.*\d)(?=.*[^A-Za-z0-9].*[^A-Za-z0-9]).{8,}$/;
 
     return validarRestrinciones.test(contrasenia);
+}
+
+export function esUnUsuarioValido(email,usuario){
+    let esValido=false;
+    //comprobamos que exista
+    if(localStorage.getItem(email)!==undefined){
+        //lo transformamos en un json para poder acceder mas facil a sus datos
+        let user=JSON.parse(localStorage.getItem(email));
+        //luego comprobamos que sus datos sean verdad
+        esValido= user.correo===email && user.usuario===usuario;
+    }
+
+    return esValido;
+}
+
+export function validarLogin(email,contrasenia){
+    let esValido=false;
+    //comprobamos que exista
+    if(localStorage.getItem(email)!==undefined){
+        //lo transformamos en un json para poder acceder mas facil a sus datos
+        let user=JSON.parse(localStorage.getItem(email));
+        //luego comprobamos que sus datos sean verdad
+        esValido= user.correo===email && user.contrasenia===contrasenia;
+    }
+
+    return esValido;
 }
