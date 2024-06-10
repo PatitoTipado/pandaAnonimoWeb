@@ -4,6 +4,8 @@ import { contengaSoloLetras, validarQueSeaCorreo, queContengaLetrasYNumeros, val
 
 const formulario = document.querySelector(".formulario");
 
+//aniadirle un elemento escuchador
+
 formulario.addEventListener("submit", (e)=>{
 
     if(validaRegistro() && validaMetodoDePago()){ 
@@ -13,6 +15,8 @@ formulario.addEventListener("submit", (e)=>{
         e.preventDefault();
     }
 });
+
+//funciones que deben ir si o si en registro
 
 function validaRegistro(){
     //variables del registro
@@ -46,6 +50,7 @@ function validaMetodoDePago(){
     
     let clave = document.getElementById("cvv").value;
 
+    
     if(clave.toString().trim()==="000"){
         //done: MENSAJE DE ERROR SI SE COMPLETA CON 000 LA CLAVE TARJETA
         alert("error cvv no puede ser 000");
