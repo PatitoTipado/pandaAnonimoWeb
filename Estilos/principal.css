@@ -63,8 +63,8 @@ label{
     .contenedorImg {
         display: grid;
         grid-template-columns: 1fr;
-       /* padding: 1.5rem;*/
-        grid-gap: 3rem;
+        padding: 1.5rem;
+        grid-gap: 3.125rem;
     }
 }
 /* Responsive Categorias
@@ -72,37 +72,30 @@ label{
 @media(max-width: 640px) {
     .contenedorCategoria{
         display: flex;
-        flex-direction: column;
-      /* grid-template-columns: 1fr;*/
-        gap: 20px;
-        max-width: 100%;
-        padding: 10px 10px;
-        margin: 10px;
-        align-items: center;
-        box-sizing: border-box;
-        margin-left: 40px;
+        margin: auto;
+        padding: 0%;
+        flex-wrap: wrap;
     }
-    .contenedorCategoria .categ{
-        display: flex;
-        flex-direction: column;
-        row-gap: 5px;
-        justify-content: center;
-       
-    }
-   .contenedorCategoria input,
+    .contenedorCategoria input,
     .contenedorCategoria select,
-   .contenedorCategoria label,
+    .contenedorCategoria label,
     .contenedorCategoria option{
-        width: 90%;
-        font-size: 0.6em;
-        font-family: serif;
-      
-    
+
+        font-size: 0.6rem;
+        height: 32px;
     }
 
- 
-   
-  
+    #icons{
+        font-size: 18px;
+        display: inline;
+    }
+
+    #busca{
+        width: 70%;
+    }
+    #categoria{
+        width: max-content;
+    }
 
 }
 
