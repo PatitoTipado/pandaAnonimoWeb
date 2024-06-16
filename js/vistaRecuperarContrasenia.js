@@ -15,3 +15,8 @@ formulario.addEventListener("submit", ()=>{
      }
      
  });
+
+ /*
+    mejorar experiencia de usuario marcando que envio el form 
+    aunque sea reseteando luego los campos y permaneceindo en la pag
+ */

@@ -68,3 +68,10 @@ function validaMetodoDePago(){
 
     return validarNumeroTarjeta(tarjeta) && contengaSoloLetras(titular) && validarClaveCVV(clave);
 }
+
+/*
+    mejorar la experiencia de usuario
+    verificando que hizo bien el registro
+    que lo hizo mal
+    que pueda distinguir el campo o en que sector la pifio
+*/
