@@ -79,11 +79,11 @@ export function validarContrasenia(contrasenia) {
 export function esUnUsuarioValido(email,usuario){
     let esValido=false;
     //comprobamos que exista
-    if(localStorage.getItem(email)!==undefined){
+    if(!(localStorage.getItem(email)==null)){
         //lo transformamos en un json para poder acceder mas facil a sus datos
         let user=JSON.parse(localStorage.getItem(email));
         //luego comprobamos que sus datos sean verdad
-        esValido= user.correo===email && user.usuario===usuario;
+        esValido= user.correo===String(email) && user.usuario===String(usuario);
     }
 
     return esValido;
@@ -92,14 +92,12 @@ export function esUnUsuarioValido(email,usuario){
 export function validarLogin(email,contrasenia){
     let esValido=false;
     //comprobamos que exista
-    if(localStorage.getItem(email)!==undefined){
+    if(localStorage.getItem(email)!==null){
         //lo transformamos en un json para poder acceder mas facil a sus datos
         let user=JSON.parse(localStorage.getItem(email));
         //luego comprobamos que sus datos sean verdad
         esValido= user.correo===email && user.contrasenia===contrasenia;
     }
-    
+
     return esValido;
 }
-
-//done

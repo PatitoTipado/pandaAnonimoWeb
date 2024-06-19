@@ -52,7 +52,7 @@ function validaMetodoDePago(){
     //variables de metodo de pago
     let tarjeta = document.getElementById("numero-tarjeta").value;
     
-    let titular= document.getElementById("titular").value;
+    let titular= document.getElementById("titular").value.trim();
     
     let clave = document.getElementById("cvv").value;
 
