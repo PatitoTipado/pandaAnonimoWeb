@@ -84,6 +84,11 @@ export function esUnUsuarioValido(email,usuario){
         let user=JSON.parse(localStorage.getItem(email));
         //luego comprobamos que sus datos sean verdad
         esValido= user.correo===String(email) && user.usuario===String(usuario);
+        if(!esValido){
+            alert("ingreso invalido, revise su email y usuario");
+        }
+    }else{
+        alert("el correo no esta registrado");
     }
 
     return esValido;
@@ -96,8 +101,18 @@ export function validarLogin(email,contrasenia){
         //lo transformamos en un json para poder acceder mas facil a sus datos
         let user=JSON.parse(localStorage.getItem(email));
         //luego comprobamos que sus datos sean verdad
-        esValido= user.correo===email && user.contrasenia===contrasenia;
+        esValido= user.correo===email && user.contrasenia===contrasenia;        
+        if(!esValido){
+            alert("ingreso invalido, revise su email y contraseña");
+        }
+    }else{
+        alert("ingreso invalido, revisar correo y contraseña");
     }
+
 
     return esValido;
 }
+
+//podriamos inscrustar los mensajes aca
+
+// y en otra clase css agregar las clases o ids que agregen

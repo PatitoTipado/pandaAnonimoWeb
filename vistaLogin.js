@@ -11,7 +11,6 @@ formulario.addEventListener("submit", (e)=>{
     localStorage.setItem("correoLogeado",email);
     formulario.submit();
    }else{
-    alert("ingreso invalido, revisar correo y contraseña");
     e.preventDefault();
     }
 });

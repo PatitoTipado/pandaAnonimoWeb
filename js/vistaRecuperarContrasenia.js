@@ -10,7 +10,6 @@ formulario.addEventListener("submit", (e)=>{
     if(esUnUsuarioValido(email,usuario)){
      formulario.submit();
     }else{
-        alert("ingreso invalido, revise email y usuario")
         e.preventDefault();
      }
      
