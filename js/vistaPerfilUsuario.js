@@ -1,10 +1,18 @@
 import { contengaSoloLetras, validarQueSeaCorreo, queContengaLetrasYNumeros, validarContrasenia, validarNumeroTarjeta, validarClaveCVV, validadorString } from "./formularioAux.js";
 
 // busco el email y la contraseña que se redistro
-const EMAIL = localStorage.getItem('email');
-document.getElementById('emailUsuario').innerHTML = `<p>${EMAIL} </p>`
-const CONTRASEÑARE = localStorage.getItem('repeatpassword');
-document.getElementById('contraseña').innerHTML = `<p>${CONTRASEÑARE} </p>`
+//const EMAIL = localStorage.getItem('email');
+//document.getElementById('emailUsuario').innerHTML = `<p>${EMAIL} </p>`
+//const CONTRASEÑARE = localStorage.getItem('repeatpassword');
+//document.getElementById('contraseña').innerHTML = `<p>${CONTRASEÑARE} </p>`
+
+let usuarioLo = localStorage.getItem("correoLogeado");
+let contraseniaLo = localStorage.getItem("contraseñaLogeada");
+
+document.getElementById("emailUsuario").innerHTML = `<p>${usuarioLo} </p>`;
+document.getElementById("contraseña").innerHTML = `<p>${contraseniaLo}<p>`;
+
+console.log(contraseniaLo);
 
 // primero creo una const que llame al formulario
 const FORMULARIO = document.querySelector(".datos");
