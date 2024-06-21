@@ -70,7 +70,7 @@ export function validarQueSeaCorreo(correo) {
     return validadorCorreo.test(correo);
 }
 export function validarContrasenia(contrasenia) {
-
+    // debe contener almaenos dos letras mayusculas o minusculas, contener al menos dos digitos, dos caracteres alfanumericos y longitud minimo de 8 caract
     const validarRestrinciones = /^(?=.*[A-Za-z].*[A-Za-z])(?=.*\d.*\d)(?=.*[^A-Za-z0-9].*[^A-Za-z0-9]).{8,}$/;
 
     return validarRestrinciones.test(contrasenia);
