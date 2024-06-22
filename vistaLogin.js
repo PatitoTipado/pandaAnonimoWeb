@@ -9,6 +9,7 @@ formulario.addEventListener("submit", (e)=>{
 
    if(validarLogin(email,contrasenia) ){
     localStorage.setItem("correoLogeado",email);
+    
     localStorage.setItem("contraseñaLogeada",contrasenia);
     formulario.submit();
    }else{

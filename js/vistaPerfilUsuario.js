@@ -10,9 +10,26 @@ let usuarioLo = localStorage.getItem("correoLogeado");
 let contraseniaLo = localStorage.getItem("contraseñaLogeada");
 
 document.getElementById("emailUsuario").innerHTML = `<p>${usuarioLo} </p>`;
-document.getElementById("contraseña").innerHTML = `<p>${contraseniaLo}<p>`;
 
+// para ocultar y mostrar contraseña 
+function mostrarOcultarContraseña(){
+let contraseñaMostrar = document.getElementById("contraseña");
+if( contraseñaMostrar.innerHTML === '*'.repeat(contraseniaLo.length) ){
+      contraseñaMostrar.innerHTML = contraseniaLo;
+}else {
+    contraseñaMostrar.innerHTML = '*'.repeat(contraseniaLo.length);
+}
+}
+
+document.getElementById("contraseña").innerHTML = `${'*'.repeat(contraseniaLo.length)}`;
+//                                                    la contraseña no se muestre 
+// la contraseña solo se oculta y si lo apretas se muestra pero no se vuelve a ocultar
+//document.getElementById("contraseña").innerHTML =`${'*'.repeat(contraseniaLo.length)}`
+//document.getElementById("contraseña").addEventListener('click',funcion ({
+// para que se muestre ->this.innerHTML = contraseniaLo;})
 console.log(contraseniaLo);
+
+document.getElementById("contraseña").addEventListener('click',mostrarOcultarContraseña  );
 
 // primero creo una const que llame al formulario
 const FORMULARIO = document.querySelector(".datos");
