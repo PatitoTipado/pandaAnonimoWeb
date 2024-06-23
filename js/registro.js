@@ -1,5 +1,5 @@
 //imports
-import { contengaSoloLetras, validarQueSeaCorreo, queContengaLetrasYNumeros, validarContrasenia, validarNumeroTarjeta, validarClaveCVV } from "./formularioAux.js";
+import * as aux from "./formularioAux.js";
 // traer el formulario a validar
 
 const formulario = document.querySelector(".formulario");
@@ -16,10 +16,12 @@ formulario.addEventListener("submit", (e)=>{
         };
         //los guardamos
         localStorage.setItem(document.getElementById("email").value,JSON.stringify(user));
+        alert("usuario registrado");
         formulario.submit();
     }else{
         e.preventDefault();
     }
+
 });
 
 //funciones que deben ir si o si en registro
@@ -44,7 +46,7 @@ function validaRegistro(){
         contraseniasIguales=false;
     }
 
-    return contengaSoloLetras(nombre)&& contengaSoloLetras(apellido) && validarQueSeaCorreo(correo) && queContengaLetrasYNumeros(usuario) && validarContrasenia(contrasenia) 
+    return aux.validarNombre(nombre) && aux.validarApellido(apellido) && aux.validarQueSeaCorreo(correo) && aux.validarUsuario(usuario) && aux.validarContrasenia(contrasenia) 
     && contraseniasIguales;
 }
 
@@ -52,24 +54,20 @@ function validaMetodoDePago(){
     //variables de metodo de pago
     let tarjeta = document.getElementById("numero-tarjeta").value;
     
-    let titular= document.getElementById("titular").value.trim();
+    let titular= document.getElementById("titular").value;
     
     let clave = document.getElementById("cvv").value;
 
-    
-    if(clave.toString().trim()==="000"){
-        //done: MENSAJE DE ERROR SI SE COMPLETA CON 000 LA CLAVE TARJETA
-        alert("error cvv no puede ser 000");
-    }
-    if(!validarNumeroTarjeta(tarjeta)){
+    if(!aux.validarNumeroTarjeta(tarjeta)){
         //done: mensaje de error si la tarjeta es invalida
         alert("error tarjeta no valida");
     }
 
-    return validarNumeroTarjeta(tarjeta) && contengaSoloLetras(titular) && validarClaveCVV(clave);
+    return aux.validarNumeroTarjeta(tarjeta) && aux.validarTitular(titular.trim()) && aux.validarClaveCVV(clave);
 }
 
 /*
+    DONE:
     mejorar la experiencia de usuario
     verificando que hizo bien el registro
     que lo hizo mal

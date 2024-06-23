@@ -26,6 +26,12 @@ export function enfocarInputsAnterior(inputs) {
 }
 export function validarClaveCVV(clave) {
 
+    if(clave.toString().trim()==="000"){
+        //done: MENSAJE DE ERROR SI SE COMPLETA CON 000 LA CLAVE TARJETA
+        alert("error cvv no puede ser 000");
+        return false;
+    }
+
     const validadorCVV = /^[1-9]{3}$/;
 
     return validadorCVV.test(clave);
@@ -44,6 +50,8 @@ export function validarNumeroTarjeta(tarjeta) {
         }
         //traer el ultimo digito
         ultimoDigito = parseInt(tarjeta[tarjeta.length - 1]);
+    }else{
+        alert("Tarjeta invalida debe contener minimo 16 numeros");
     }
 
     //comparar 
@@ -61,20 +69,74 @@ export function queContengaLetrasYNumeros(valor) {
 
     return expresionLetrasYNumeros.test(valor);
 }
+
+export function validarUsuario(valor) {
+
+    const expresionLetrasYNumeros = /^[a-zA-Z0-9]+$/;
+
+    if(expresionLetrasYNumeros.test(valor)){
+        return true;
+    }else{
+        alert("el campo <usuario> solo acepta letras y numeros");
+        return false;
+    }
+}
+export function validarTitular(valor) {
+
+    if(contengaSoloLetras(valor)){
+        return true;
+    }else{
+        alert("el campo <Titular> solo acepta letras");
+        return false;
+    }
+}
+
 export function validarQueSeaCorreo(correo) {
 
-    //valida que tenga arroba y termine en .com
-    //ojo que lo saque de aca https://medium.com/@jgratereaux/validar-correos-electr%C3%B3nicos-con-expresiones-regulares-7914751b6018
-    const validadorCorreo = /^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z]{2,}))$/;
+    const expresionCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    return validadorCorreo.test(correo);
+    if( expresionCorreo.test(correo)){
+        return true;
+    }else{
+            alert("no es un correo valido.\n example correo valido web@unlam.com");
+        return false;
+    }
 }
 export function validarContrasenia(contrasenia) {
 
     const validarRestrinciones = /^(?=.*[A-Za-z].*[A-Za-z])(?=.*\d.*\d)(?=.*[^A-Za-z0-9].*[^A-Za-z0-9]).{8,}$/;
 
-    return validarRestrinciones.test(contrasenia);
+    if( validarRestrinciones.test(contrasenia)){
+        return true;
+    }else{
+        alert("contraseña invalida debe contener: \n 8 caracteres ( mínimo 2 letras, 2 números y 2 caracteres especiales) ");
+    }
 }
+
+//REGISTRO VALIDACION PRIMERA PARTE
+export function validarNombre(nombre) {
+    const expresionLetras = /^[A-Za-z]+$/;
+
+    if (expresionLetras.test(nombre)) {
+        return true;
+    } else {
+        alert("El nombre solo puede contener letras");
+        return false;
+    }
+}
+export function validarApellido(apellido) {
+
+    const expresionLetras = /^[A-Za-z]+$/;
+
+    if(expresionLetras.test(apellido)){
+        return true;
+    }
+    else{
+        alert("el apellido solo puede llevar letras");
+        return false;
+    }
+}
+
 
 export function esUnUsuarioValido(email,usuario){
     let esValido=false;
