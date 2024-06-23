@@ -5,10 +5,12 @@ const formulario= document.querySelector(".formulario");
 //le aniadimos el evento escuchaodr
 formulario.addEventListener("submit", (e)=>{
    let email= document.querySelector("#email").value;
-   let contrasenia= document.querySelector("#password").value;
-   
+   let contrasenia = document.querySelector("#password").value;
+
    if(validarLogin(email,contrasenia) ){
     localStorage.setItem("correoLogeado",email);
+    
+    localStorage.setItem("contraseñaLogeada",contrasenia);
     formulario.submit();
    }else{
     e.preventDefault();
