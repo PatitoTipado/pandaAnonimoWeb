@@ -31,6 +31,21 @@ label{
 }
 /* Responsive Galery 
 */
+
+.btn-flotante{
+    background: #063254;
+    position: fixed;
+    top: 50%;
+    left: 97%;
+    width: 2rem;
+    height: 2rem;
+}
+
+.flecha{
+    font-size: 1.8rem;
+    color: rgb(96, 147, 210);
+}
+
 @media (max-width: 1290px) {
     .contenedorImg {
         width: auto;
@@ -57,7 +72,9 @@ label{
         margin-top: 3rem;
         justify-content: space-around;
     }
-
+    .btn-flotante{
+        left: 96%;
+    }
 }
 @media(max-width: 640px) {
     .contenedorImg {
@@ -96,7 +113,9 @@ label{
     #categoria{
         width: max-content;
     }
-
+    .btn-flotante{
+        left: 93%;
+    }
 }
 
 
