@@ -27,7 +27,6 @@ document.getElementById("contraseña").innerHTML = `${'*'.repeat(contraseniaLo.l
 //document.getElementById("contraseña").innerHTML =`${'*'.repeat(contraseniaLo.length)}`
 //document.getElementById("contraseña").addEventListener('click',funcion ({
 // para que se muestre ->this.innerHTML = contraseniaLo;})
-console.log(contraseniaLo);
 
 document.getElementById("contraseña").addEventListener('click',mostrarOcultarContraseña  );
 
