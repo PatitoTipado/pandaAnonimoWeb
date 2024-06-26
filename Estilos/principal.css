@@ -56,6 +56,12 @@ label{
         grid-gap: 20px
     }
 }
+
+@media (max-width: 1100px){
+    .btn-flotante{
+        left: 96%;
+    }
+}
 @media screen and (max-width: 900px){
     .contenedorImg {
         width: auto; 
@@ -73,9 +79,16 @@ label{
         justify-content: space-around;
     }
     .btn-flotante{
-        left: 96%;
+        left: 95%;
     }
 }
+
+@media (max-width: 700px){
+    .btn-flotante{
+        left: 94%;
+    }
+}
+
 @media(max-width: 640px) {
     .contenedorImg {
         display: grid;
@@ -113,10 +126,11 @@ label{
     #categoria{
         width: max-content;
     }
-    .btn-flotante{
-        left: 93%;
-    }
 }
 
-
+@media (max-width: 500px){
+    .btn-flotante{
+        left: 91%;
+    }
+}
 
