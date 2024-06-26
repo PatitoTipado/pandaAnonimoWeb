@@ -69,7 +69,7 @@
     display: flex;
     justify-content: space-between;
 }
-input, label, h2, p{
+input, label, h2, p, a{
     color: #FFFFFF;
     font-weight: bold;
     padding: 0.6em;
@@ -110,7 +110,7 @@ option{
         grid-template-rows: auto;  
         gap: 0.5em;
     }    
-    input, label, h2, p{
+    input, label, h2, p, a{
         font-size: 1em;
         padding: 0.3em;
     }
@@ -133,7 +133,7 @@ option{
         grid-template-rows: 30em auto auto; 
         gap: 0.5em;
     }
-    input, label, h2, p{
+    input, label, h2, p, a{
         font-size: 1em;
         padding: 0.3em;
     }
