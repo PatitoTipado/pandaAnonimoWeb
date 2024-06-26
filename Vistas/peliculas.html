@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Estilos/estilos_comunes.css">
-    <link rel="stylesheet" href="../Estilos/estilos_series.css">
+    <link rel="stylesheet" href="../Estilos/flickity.min.css" media="screen">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../Estilos/custom.css">
+    <link rel="stylesheet" href="../Estilos/estilos_comunes.css">
+    <link rel="stylesheet" href="../Estilos/estilos_series.css">   
     <title>Peliculas</title>
 </head>
 <body>
@@ -17,40 +19,24 @@
         </nav>
         <section class="contenedorSerie">
             <div class="contenedorIframe">
-                <div>
-                    <iframe src="https://www.youtube.com/embed/GTnNVq99qdE" title="Mútiple Tráiler Oficial 1 (Universal Pictures) HD" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="iframedatos">
+                   
                 </div>
                 <div class="btnComenzar">      
-                    <a href="https://www.youtube.com/watch?v=GTnNVq99qdE&t=45" target="_blank"> Comenzar</a>                    
+                                     
                 </div>
             </div>
             <div class="contenedorDetalle">
-                <article>
-                    <h2> T&iacute;tulo : Fragmentado</h2>
+                <article id="titulo">
                 </article>
-                <article>
-                    <p>Duraci&oacute;n : 117 minutos </p>
+                <article class="duracion">
                 </article>
                 <article class="descripcion">
-                    <div>
-                        <p>Genero : Terror psicol&oacute;gico</p>
+                    <div class="genero">                      
                     </div>
                     <div class="actores">
-                        <p>Actores: 
-                            <a href="https://es.wikipedia.org/wiki/James_McAvoy" target="_blank">James McAvoy, </a>
-                            <a href="https://es.wikipedia.org/wiki/Anya_Taylor-Joy" target="_blank">Anya Taylor-Joy, </a>
-                            <a href="https://es.wikipedia.org/wiki/Betty_Buckley" target="_blank">Betty Buckley, </a>
-                            <a href="https://es.wikipedia.org/wiki/Haley_Lu_Richardson" target="_blank">Haley Lu Richardson, </a>
-                            <a href="https://es.wikipedia.org/wiki/Jessica_Sula" target="_blank">Jessica Sula. </a>
-                        </p>
                     </div>
-                    <div>
-                        <p>
-                            A pesar de que Kevin le ha demostrado a su psiquiatra de confianza que posee 23 personalidades diferentes, 
-                            a&uacute;n queda una misteriosa por emerger decidida a dominar a todas las dem&aacute;s. Obligado a raptar a tres chicas 
-                            adolescentes encabezadas por la decidida y observadora Casey, Kevin lucha por sobrevivir contra todas sus 
-                            personalidades y la gente que le rodea a medida que las paredes de sus compartimentos mentales se derrumban.
-                        </p>
+                    <div class="sinopsis">
                     </div>
                 </article>
             </div>               
@@ -58,70 +44,14 @@
         <section>
             <h3>Similares</h3>
         </section>              
-        <section class="galery">  
-            <div class="item">
-                <a href="../Vistas/peliculas.html">
-                    <img src="../img/peliculas/A Dog is Journey.jpg" alt="">
-                </a>      
-            </div>
-            <div class="item">
-                <a href="../Vistas/peliculas.html">
-                    <img src="../img/peliculas/Avatar.jpg" alt="">
-                </a>      
-            </div>
-
-            <div class="item">
-                <a href="../Vistas/peliculas.html">
-                    <img src="../img/peliculas/Deadpool 2.jpeg" alt="">
-                </a>      
-            </div>
-            <div class="item">
-                <a href="../Vistas/peliculas.html">
-                    <img src="../img/peliculas/Focus.jpeg" alt="">
-                </a>      
-            </div>     
-            <div class="item">
-                <a href="../Vistas/peliculas.html">
-                    <img src="../img/peliculas/Gladiator.jpg" alt="">
-                </a>      
-            </div>                                      
-            <div class="item">
-                <a href="../Vistas/peliculas.html">
-                    <img src="../img/peliculas/Hachi A Dog is Tale.jpg" alt="">
-                </a>      
-            </div>
-            <div class="item">
-                <a href="../Vistas/peliculas.html">
-                    <img src="../img/peliculas/Hereditary.jpg" alt="">
-                </a>      
-            </div>
-            <div class="item">
-                <a href="../Vistas/peliculas.html">
-                    <img src="../img/peliculas/La llorona.jpg" alt="">
-                </a>      
-            </div>  
-            <div class="item">
-                <a href="../Vistas/peliculas.html">
-                    <img src="../img/peliculas/Marley and me.jpg" alt="">
-                </a>      
-            </div>
-            <div class="item">
-                <a href="../Vistas/peliculas.html">
-                    <img src="../img/peliculas/Me Before You.jpg" alt="">
-                </a>      
-            </div>
-            <div class="item">
-                <a href="../Vistas/peliculas.html">
-                    <img src="../img/peliculas/Replicas.jpeg" alt="">
-                </a>      
-            </div>
-            <div class="item">
-                <a href="../Vistas/peliculas.html">
-                    <img src="../img/peliculas/Top Gun Maverick.jpg" alt="">
-                </a>      
-            </div>                                                                           
+        <section class="main-carousel">  
+                                                 
         </section>                                                                       
     </main>
+    <script src="../js/flickity.pkgd.min.js"></script>
     <script src="../js/Nabvar.js"></script>
+    <script src="../js/datosPeliculasSeries.js"></script>
+    <script src="../js/detallePeliculasSeries.js"></script>
+    <script src="../js/main.js"></script>  
 </body>
 </html>

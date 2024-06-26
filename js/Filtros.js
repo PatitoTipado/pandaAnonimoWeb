@@ -103,10 +103,10 @@ function agregarImgAlContenedor(img){
 
     if(esPelicula(img)){
         ubicacion += "../img/peliculas/" + img;
-        A.href = VISTAS[1] + "?nombre=" + img;
+        A.href = VISTAS[1] + "?nombre=" + img +"&tipo=pelicula";
     }else{
         ubicacion += "../img/series/" + img;
-        A.href = VISTAS[0] + "?nombre=" + img;
+        A.href = VISTAS[0] + "?nombre=" +img + "&tipo=serie";
     }
 
     IMG.src = ubicacion;

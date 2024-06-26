@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Estilos/flickity.min.css" media="screen">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../Estilos/custom.css">
     <link rel="stylesheet" href="../Estilos/estilos_comunes.css">
     <link rel="stylesheet" href="../Estilos/estilos_series.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
     <title>Series</title>
 </head>
 <body>
@@ -15,26 +18,25 @@
                 
             </ul>
         </nav>
-        <section class="contenedorSerie">
+        <section class="contenedorSerie"> 
             <div class="contenedorIframe">
-                <div>
-                    <iframe src="https://www.youtube.com/embed/NyR6u4aUCa4" title="Bridgerton: Temporada 3 | Tráiler oficial | Netflix" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="iframedatos">
+        
                 </div>
-                <div class="btnComenzar">      
-                    <a href="https://www.youtube.com/watch?v=AdBweWvuG68" target="_blank"> Comenzar</a>                    
+                <div class="btnComenzar">  
+                                         
                 </div>
             </div>
             <div class="contenedorDetalle">
-                <article>
-                    <h2> T&iacute;tulo : Bridgerton</h2>
+                <article id="titulo">
+                    
                 </article>
                 <article class="detalleSerie">
                     <div>
                         <label for="tempora">Temporadas :
                             <select name="tempora" id="tempora">
                                 <option selected>Seleccionar</option>
-                                <option value="temp1">temporada 1</option>
-                                <option value="temp2">temporada 2</option>
+
                             </select> 
                         </label>
                     </div>
@@ -42,36 +44,17 @@
                         <label for="capitulo">Cap&iacute;tulo :
                             <select name="capitulo" id="capitulo">
                                 <option selected>Cap&iacute;tulo </option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
+ 
                             </select> 
                         </label>
                     </div>
                 </article>
                 <article class="descripcion">
-                    <div>
-                        <p>Genero : Drama historico Romance</p>
+                    <div class="genero">                       
                     </div>
                     <div class="actores">
-                        <p>Actores: 
-                            <a href="https://en.wikipedia.org/wiki/Julie_Andrews" target="_blank">Julie Andrews, </a>
-                            <a href="https://en.wikipedia.org/wiki/Phoebe_Dynevor" target="_blank">Phoebe Dynevor, </a>
-                            <a href="https://es.wikipedia.org/wiki/Reg%C3%A9-Jean_Page" target="_blank">Reg&eacute;-Jean Page, </a>
-                            <a href="https://es.wikipedia.org/wiki/Nicola_Coughlan" target="_blank">Nicola Coughlan, </a>
-                            <a href="https://es.wikipedia.org/wiki/Jonathan_Bailey" target="_blank">Jonathan Bailey, </a>
-                            <a href="https://es.wikipedia.org/wiki/Adjoa_Andoh" target="_blank">Adjoa Andoh.</a>
-                        </p>
                     </div>
-                    <div>
-                        <p>
-                            La serie est&aacute; ambientada en la alta sociedad londinense durante el per&iacute;odo Regencia ingl&eacute;s de principios del siglo XIX. La historia 
-                            se centra en dos familias, los Bridgerton y los Featherington.
-                            La familia Bridgerton est&aacute; formada por Violet, vizcondesa viuda Bridgerton, sus cuatro hijos Anthony, Benedict, Colin y Gregory, 
-                            y sus cuatro hijas Daphne, Eloise, Francesca e Hyacinth.
-                            La familia Featherington se integra por Lady Portia Featherington, su esposo el bar&oacute;n Archibald Featherington y sus tres hijas, Philippa, 
-                            Prudence y Penelope, y una prima lejana, Marina Thompson.
-                        </p>
+                    <div class="sinopsis">
                     </div>
                 </article>
             </div>               
@@ -81,49 +64,13 @@
             <h3>Similares</h3>
         </section>
                
-        <section class="galery">                                                  
-            <div class="item">                                                           
-                <a href="../Vistas/series.html">                                        
-                    <img src="../img/series/Anne with an E.jpg" alt="">                        
-                </a>                                                                     
-            </div>                                                                       
-            <div class="item">                                                           
-                <a href="../Vistas/series.html">                                        
-                    <img src="../img/series/Breaking Bad.jpg" alt="">                         
-                </a>                                                                     
-            </div>                                                                       
-            <div class="item">                                                           
-                <a href="../Vistas/series.html">                                      
-                    <img src="../img/series/Bridgerton.jpg" alt="">                        
-                </a>                                                                     
-            </div>                                                                       
-            <div class="item">                                                           
-                <a href="../Vistas/series.html">                                      
-                    <img src="../img/series/Dahmer.jpg" alt="">                            
-                </a>                                                                     
-            </div>                                                                       
-            <div class="item">                                                           
-                <a href="../Vistas/series.html">                                       
-                    <img src="../img/series/Game of Thrones.jpeg" alt="">                       
-                </a>                                                                     
-            </div>                                                                       
-            <div class="item">                                                           
-                <a href="../Vistas/series.html">                                      
-                    <img src="../img/series/Marianne.jpeg" alt="">                      
-                </a>                                                                     
-            </div>                                                                       
-            <div class="item">                                                           
-                <a href="../Vistas/series.html">                                       
-                    <img src="../img/series/Sweet Tooth.jpg" alt="">                    
-                </a>                                                                     
-            </div>                                                                       
-            <div class="item">                                                           
-                <a href="../Vistas/series.html">                                      
-                    <img src="../img/series/The Witcher.jpeg" alt="">                     
-                </a>                                                                     
-            </div>                                                                                                               
+        <section class="main-carousel">                                                                                                                       
         </section>                                                                       
     </main>
     <script src="../js/Nabvar.js"></script>
+    <script src="../js/datosPeliculasSeries.js"></script>
+    <script src="../js/detallePeliculasSeries.js"></script>
+    <script src="../js/flickity.pkgd.min.js"></script>
+    <script src="../js/main.js"></script>  
 </body>
 </html>
