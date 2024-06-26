@@ -26,7 +26,16 @@ function agregarItemAlMenu(url, titulo, icono){
     NUEVO_ELEMENTO.appendChild(A); 
     MENU.appendChild(NUEVO_ELEMENTO);
 
-    if(titulo == "Home"){
+    //si cambia de pagina el navHome se le agrega a la pagina en la que esta 
+    let aux = new String(window.location.href)
+
+    if(aux.includes("Home") && titulo=="Home"){
+        NUEVO_ELEMENTO.classList.add("navhome");
+    }else if((aux.includes("Series") || aux.includes("series"))&& titulo=="Series"){
+        NUEVO_ELEMENTO.classList.add("navhome");
+    }else if((aux.includes("Peliculas") || aux.includes("peliculas"))&& titulo=="Peliculas"){
+        NUEVO_ELEMENTO.classList.add("navhome");
+    }else if(aux.includes("Perfil") && titulo=="Perfil"){
         NUEVO_ELEMENTO.classList.add("navhome");
     }
 }
@@ -37,5 +46,7 @@ for(let i = 0; i < NAVBAR["url"].length; i++){
 
 const CERRAR = document.querySelector(".Cerrar");
 CERRAR.addEventListener("click", () =>{
-    localStorage.clear();
+    //cambio para que se elimine solo el usuario y contrasenia logeada
+    localStorage.removeItem("correoLogeado");
+    localStorage.removeItem("contraseñaLogeada");
 })
