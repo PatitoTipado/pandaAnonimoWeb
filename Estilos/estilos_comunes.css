@@ -12,8 +12,15 @@ html {
 body{
     background: linear-gradient(#03002c, #08073b, #020022);
     width: 100%;
+    height: 100%;
+}
+
+.d{
+    background: linear-gradient(#03002c, #08073b, #020022);
+    width: 100%;
     height: 100dvh;
 }
+
 .menu{
     background-color: #020022;
     display: flex;

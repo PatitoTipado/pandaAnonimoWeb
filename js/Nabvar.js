@@ -35,7 +35,7 @@ function agregarItemAlMenu(url, titulo, icono){
         NUEVO_ELEMENTO.classList.add("navhome");
     }else if((aux.includes("Peliculas") || aux.includes("peliculas"))&& titulo=="Peliculas"){
         NUEVO_ELEMENTO.classList.add("navhome");
-    }else if(aux.includes("Perfil") && titulo=="Perfil"){
+    }else if((aux.includes("Perfil") || aux.includes("perfil")) && titulo=="Perfil"){
         NUEVO_ELEMENTO.classList.add("navhome");
     }
 }

@@ -10,17 +10,26 @@ formulario.addEventListener("submit", (e)=>{
 
     if(validaRegistro() && validaMetodoDePago()){
         //traemos todos los datos que se usaran para validaciones
+        alert("usuario registrado");
         let user= {usuario:document.getElementById("usuario").value,
             correo: document.getElementById("email").value,
-            contrasenia:document.getElementById("password").value
+            contrasenia:document.getElementById("password").value,
+            tarjeta: document.querySelector('input[name="credito-debito"]:checked').value
         };
         //los guardamos
         localStorage.setItem(document.getElementById("email").value,JSON.stringify(user));
-        alert("usuario registrado");
         formulario.submit();
     }else{
         e.preventDefault();
     }
+
+});
+
+const cancelar = document.getElementById("cancelar");
+
+cancelar.addEventListener("click", ()=>{
+
+    window.location.href="../Index.html"
 
 });
 
@@ -57,6 +66,18 @@ function validaMetodoDePago(){
     let titular= document.getElementById("titular").value;
     
     let clave = document.getElementById("cvv").value;
+
+    const metodoDePago = document.querySelectorAll('input[name="credito-debito"]');
+    let emisorTarjeta= document.querySelectorAll('input[name="visa-mastercard-cabal"]'); 
+    if(!aux.validarQueUnRadioEsteCheck(metodoDePago)){
+        alert ("seleccione una tarjeta");
+        return false;
+    }
+
+    if(!aux.validarQueUnRadioEsteCheck(emisorTarjeta)){
+        alert ("seleccione un emisor de tarjeta");
+        return false;
+    }
 
     if(!aux.validarNumeroTarjeta(tarjeta)){
         //done: mensaje de error si la tarjeta es invalida

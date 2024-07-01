@@ -299,8 +299,10 @@ function agregarImgSegunSubtexto(filtro, TituloNavbar){
     }
 }
 
-BUSQUEDA.addEventListener("keyup", () =>{
+BUSQUEDA.addEventListener("keyup", (e) =>{
    
+    let section= document.querySelector(".contenedorImg");
+
     if(NOMBRE_HOME == "Inicia sesion"){
         agregarImgSegunSubtexto(filtro, NOMBRE_HOME)
     if(BUSQUEDA.value == ""){
@@ -319,6 +321,13 @@ BUSQUEDA.addEventListener("keyup", () =>{
         actualizar(filtro);
         filtro = [];
     } 
+    }
+    if(section.children.length === 0){
+        document.getElementById("body").classList.add("d");
+        document.querySelector(".contenedorImg").innerHTML+=`<section class="contenedorCategoria" id="new"><h1>no se encontro resultados</h1></section>`
+    }else if(document.getElementById("new")!=null && section.children.length> 1){
+        document.getElementById("body").classList.remove("d")
+        document.getElementById("new").remove();
     }
 })
 /*-------------------------------------------------------------------------------------------------------*/

@@ -25,14 +25,19 @@ export function enfocarInputsAnterior(inputs) {
     }
 }
 export function validarClaveCVV(clave) {
-
-    if(clave.toString().trim()==="000"){
+    
+    const validadorCVV = /^[1-9]{3}$/;
+    
+    if(clave=="000"){
         //done: MENSAJE DE ERROR SI SE COMPLETA CON 000 LA CLAVE TARJETA
         alert("error cvv no puede ser 000");
         return false;
     }
+    if(clave=="" || !validadorCVV.test(clave)){
+        alert("cvv invalido");
+        return false;
+    }
 
-    const validadorCVV = /^[1-9]{3}$/;
 
     return validadorCVV.test(clave);
 }
@@ -168,13 +173,19 @@ export function validarLogin(email,contrasenia){
             alert("ingreso invalido, revise su email y contraseña");
         }
     }else{
-        alert("ingreso invalido, revisar correo y contraseña");
+        alert("ingreso invalido, correo no registrado");
     }
-
 
     return esValido;
 }
 
-//podriamos inscrustar los mensajes aca
-
-// y en otra clase css agregar las clases o ids que agregen
+export function validarQueUnRadioEsteCheck(radios){
+    let seleccionado = false;
+    for (const radio of radios) {
+        if (radio.checked) {
+            seleccionado = true;
+            break;
+        }
+    }
+    return seleccionado;
+}

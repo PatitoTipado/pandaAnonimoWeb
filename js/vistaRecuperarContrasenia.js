@@ -7,6 +7,12 @@ formulario.addEventListener("submit", (e)=>{
     let email= document.querySelector("#email").value;
     let usuario= document.querySelector("#usuario").value;
     
+    if(email=="" && usuario==""){
+        alert("ingrese un email a recuperar");
+        e.preventDefault();
+        return;
+    }
+
     if(esUnUsuarioValido(email,usuario)){
      formulario.submit();
     }else{
@@ -15,7 +21,10 @@ formulario.addEventListener("submit", (e)=>{
      
  });
 
- /*
-    mejorar experiencia de usuario marcando que envio el form 
-    aunque sea reseteando luego los campos y permaneceindo en la pag
- */
+const cancelar = document.getElementById("cancelar");
+
+cancelar.addEventListener("click", ()=>{
+
+    window.location.href="../Index.html"
+
+});

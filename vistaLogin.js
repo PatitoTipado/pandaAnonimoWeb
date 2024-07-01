@@ -8,17 +8,9 @@ formulario.addEventListener("submit", (e)=>{
    let contrasenia = document.querySelector("#password").value;
 
    if(validarLogin(email,contrasenia) ){
-    localStorage.setItem("correoLogeado",email);
-    
-    localStorage.setItem("contraseñaLogeada",contrasenia);
+    localStorage.setItem("usuarioLogeado",localStorage.getItem(email));
     formulario.submit();
    }else{
     e.preventDefault();
     }
 });
-
-/* DO: agregar mensajes para mejorar la experiencia de usuario
-* que pueda identificar en que campo se equivoco
-* que pueda validar que esta equivocandose 
-* que pueda validar que este haciendo bien el login
-*/
