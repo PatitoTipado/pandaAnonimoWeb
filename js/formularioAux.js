@@ -146,34 +146,31 @@ export function validarApellido(apellido) {
 export function esUnUsuarioValido(email,usuario){
     let esValido=false;
     //comprobamos que exista
-    if(!(localStorage.getItem(email)==null)){
-        //lo transformamos en un json para poder acceder mas facil a sus datos
-        let user=JSON.parse(localStorage.getItem(email));
-        //luego comprobamos que sus datos sean verdad
-        esValido= user.correo===String(email) && user.usuario===String(usuario);
-        if(!esValido){
-            alert("ingreso invalido, revise su email y usuario");
-        }
-    }else{
-        alert("el correo no esta registrado");
+    const usuariosRegistrados = JSON.parse(localStorage.getItem('usuarios')) || [];
+
+    const usuarioExistente = usuariosRegistrados.find(user => user.correo == email && user.contrasenia==contrasenia);
+
+    if (usuarioExistente) {
+        esValido=true;
+    } else {
+        alert("ingreso invalido, revise su email y usuario");
     }
 
     return esValido;
+
 }
 
 export function validarLogin(email,contrasenia){
     let esValido=false;
     //comprobamos que exista
-    if(localStorage.getItem(email)!==null){
-        //lo transformamos en un json para poder acceder mas facil a sus datos
-        let user=JSON.parse(localStorage.getItem(email));
-        //luego comprobamos que sus datos sean verdad
-        esValido= user.correo===email && user.contrasenia===contrasenia;        
-        if(!esValido){
-            alert("ingreso invalido, revise su email y contraseña");
-        }
-    }else{
-        alert("ingreso invalido, correo no registrado");
+    const usuariosRegistrados = JSON.parse(localStorage.getItem('usuarios')) || [];
+
+    const usuarioExistente = usuariosRegistrados.find(user => user.correo == email && user.contrasenia==contrasenia);
+
+    if (usuarioExistente) {
+        esValido=true;
+    } else {
+        alert("ingreso invalido, revise su email y contraseña");
     }
 
     return esValido;

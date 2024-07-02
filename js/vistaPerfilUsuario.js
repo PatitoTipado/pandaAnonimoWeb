@@ -39,12 +39,14 @@ import * as aux from "./formularioAux.js";
 
     cancelar.addEventListener("click", ()=>{
 
+        //DO: eliminar usuario de los usuarios registrados e ir al inicio borrando tmb el usuario logeado 
+
         window.location.href="./principal.html?nav=Home"
 
     });
 
     // creo un addEventListener 
-    FORMULARIO.addEventListener('submit',function (event){
+    FORMULARIO.addEventListener('submit', (event)=>{
         // evita enviar el form si no esta completado
         //  event.preventDefault();
             
@@ -81,12 +83,27 @@ import * as aux from "./formularioAux.js";
     
               if(aux.validarContrasenia(contra) && contra==recontra){
                 contraValida=true;
-                let user=JSON.parse(localStorage.getItem(`${correo}`));
+                
+                //cambios para user logeado
                 let userLogeado= JSON.parse(localStorage.getItem("usuarioLogeado"));
+                
                 userLogeado.contrasenia=contra;
+                
+                //cambios para usuarios generales
+                
+                const usuariosRegistrados = JSON.parse(localStorage.getItem('usuarios'));
+                
+                const usuarioEncontrado = usuariosRegistrados.find(user => user.correo == userLogeado.correo);
+                
+                usuarioEncontrado.contrasenia=contra;
+                
+                let usuariosRegistradosActualizados= usuariosRegistrados.filter(user => user.correo!=userLogeado.correo);
+                
+                usuariosRegistradosActualizados.push(usuarioEncontrado);
+                
+                localStorage.setItem("usuarios",JSON.stringify(usuariosRegistradosActualizados));
                 localStorage.setItem("usuarioLogeado",JSON.stringify(userLogeado));
-                user.contrasenia=contra;
-                localStorage.setItem(`${correo}`,JSON.stringify(user));
+                
                 alert('cambio de contraseña exitoso')
             }
           }
@@ -117,20 +134,27 @@ import * as aux from "./formularioAux.js";
             if(!aux.validarClaveCVV(cvv)){
                 return false;
             }
-        
-            let user=JSON.parse(localStorage.getItem(`${correo}`));
-
-            let userLogeado= JSON.parse(localStorage.getItem("usuarioLogeado"));
-
-            userLogeado.tarjeta=tarjetaSeleccionada.value;
-
-            localStorage.setItem("usuarioLogeado",JSON.stringify(userLogeado));
-
-            user.tarjeta=tarjetaSeleccionada.value;
-
-            localStorage.setItem(`${correo}`,JSON.stringify(user));
-
-            alert('cambio de tarjeta exitoso')
+                
+                let userLogeado= JSON.parse(localStorage.getItem("usuarioLogeado"));
+                
+                userLogeado.tarjeta=tarjetaSeleccionada.value;
+                
+                //cambios para usuarios generales
+                
+                const usuariosRegistrados = JSON.parse(localStorage.getItem('usuarios')) || [];
+                
+                const usuarioEncontrado = usuariosRegistrados.find(user => user.correo === userLogeado.correo);
+                
+                usuarioEncontrado.tarjeta=tarjetaSeleccionada.value;
+                
+                let usuariosRegistradosActualizados= usuariosRegistrados.filter(user => user.correo!=userLogeado.correo);
+                
+                usuariosRegistradosActualizados.push(usuarioEncontrado);                
+                
+                localStorage.setItem("usuarios",JSON.stringify(usuariosRegistradosActualizados));
+                localStorage.setItem("usuarioLogeado",JSON.stringify(userLogeado));
+                
+                alert('cambio de tarjeta exitoso')
 
         }
         

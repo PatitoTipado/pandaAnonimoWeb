@@ -14,7 +14,8 @@ formulario.addEventListener("submit", (e)=>{
     }
 
     if(esUnUsuarioValido(email,usuario)){
-     formulario.submit();
+    alert("correo enviado");
+    formulario.submit();
     }else{
         e.preventDefault();
      }

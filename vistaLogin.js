@@ -8,7 +8,9 @@ formulario.addEventListener("submit", (e)=>{
    let contrasenia = document.querySelector("#password").value;
 
    if(validarLogin(email,contrasenia) ){
-    localStorage.setItem("usuarioLogeado",localStorage.getItem(email));
+    const usuariosRegistrados = JSON.parse(localStorage.getItem('usuarios'));
+    const usuarioLogeado = usuariosRegistrados.find(user => user.correo == email && user.contrasenia==contrasenia);
+    localStorage.setItem("usuarioLogeado",JSON.stringify(usuarioLogeado));
     formulario.submit();
    }else{
     e.preventDefault();

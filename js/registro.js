@@ -10,14 +10,25 @@ formulario.addEventListener("submit", (e)=>{
 
     if(validaRegistro() && validaMetodoDePago()){
         //traemos todos los datos que se usaran para validaciones
-        alert("usuario registrado");
-        let user= {usuario:document.getElementById("usuario").value,
-            correo: document.getElementById("email").value,
-            contrasenia:document.getElementById("password").value,
-            tarjeta: document.querySelector('input[name="credito-debito"]:checked').value
-        };
         //los guardamos
-        localStorage.setItem(document.getElementById("email").value,JSON.stringify(user));
+        const usuariosRegistrados = JSON.parse(localStorage.getItem('usuarios')) || [];
+        
+        const usuarioExistente = usuariosRegistrados.find(usuario => usuario.nombre === nombre);
+        
+        if (!usuarioExistente) {
+            const nuevoUsuario = {
+                usuario: document.getElementById("usuario").value,
+                correo: document.getElementById("email").value,
+                contrasenia:document.getElementById("password").value,
+                tarjeta: document.querySelector('input[name="credito-debito"]:checked').value
+            };
+
+            usuariosRegistrados.push(nuevoUsuario);
+            localStorage.setItem('usuarios', JSON.stringify(usuariosRegistrados));
+        }else {
+            alert('Este usuario ya existe');
+        }
+        alert("usuario registrado");
         formulario.submit();
     }else{
         e.preventDefault();
