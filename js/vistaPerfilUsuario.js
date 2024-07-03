@@ -39,9 +39,16 @@ import * as aux from "./formularioAux.js";
 
     cancelar.addEventListener("click", ()=>{
 
-        //DO: eliminar usuario de los usuarios registrados e ir al inicio borrando tmb el usuario logeado 
+        let userLogeado= JSON.parse(localStorage.getItem("usuarioLogeado"));
+        const usuariosRegistrados = JSON.parse(localStorage.getItem('usuarios'));
+                
+        let usuariosRegistradosActualizados= usuariosRegistrados.filter(user => user.correo!=userLogeado.correo);
 
-        window.location.href="./principal.html?nav=Home"
+        localStorage.setItem("usuarios",JSON.stringify(usuariosRegistradosActualizados));
+        localStorage.removeItem("usuarioLogeado");
+
+        alert ("suscripcion cancelada con exito, cerrando sesion");
+        window.location.href="../index.html"
 
     });
 

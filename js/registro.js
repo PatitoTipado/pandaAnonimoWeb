@@ -13,9 +13,18 @@ formulario.addEventListener("submit", (e)=>{
         //los guardamos
         const usuariosRegistrados = JSON.parse(localStorage.getItem('usuarios')) || [];
         
-        const usuarioExistente = usuariosRegistrados.find(usuario => usuario.nombre === nombre);
-        
-        if (!usuarioExistente) {
+        const correoExistente = usuariosRegistrados.find(usuario => usuario.correo === document.getElementById("email").value);
+        const usuarioExistente = usuariosRegistrados.find(usuario => usuario.usuario===document.getElementById("usuario").value);
+
+        if(usuarioExistente){
+            alert("este usuario ya existe")
+            e.preventDefault();
+            return;
+        }else if(correoExistente){
+            alert("este correo ya existe");
+            e.preventDefault();
+            return;
+        }else{
             const nuevoUsuario = {
                 usuario: document.getElementById("usuario").value,
                 correo: document.getElementById("email").value,
@@ -25,11 +34,10 @@ formulario.addEventListener("submit", (e)=>{
 
             usuariosRegistrados.push(nuevoUsuario);
             localStorage.setItem('usuarios', JSON.stringify(usuariosRegistrados));
-        }else {
-            alert('Este usuario ya existe');
+
+            alert("usuario registrado");
+            formulario.submit();    
         }
-        alert("usuario registrado");
-        formulario.submit();
     }else{
         e.preventDefault();
     }

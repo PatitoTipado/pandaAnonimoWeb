@@ -148,7 +148,7 @@ export function esUnUsuarioValido(email,usuario){
     //comprobamos que exista
     const usuariosRegistrados = JSON.parse(localStorage.getItem('usuarios')) || [];
 
-    const usuarioExistente = usuariosRegistrados.find(user => user.correo == email && user.contrasenia==contrasenia);
+    const usuarioExistente = usuariosRegistrados.find(user => user.correo == email && user.usuario==usuario);
 
     if (usuarioExistente) {
         esValido=true;
